@@ -8,10 +8,10 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Component
-public class StageTwoDelegate implements JavaDelegate {
+public class DetourDelegate implements JavaDelegate {
 
     @Override
     public void execute(DelegateExecution delegateExecution) throws Exception {
-        log.info("---------------> executing stage two");
+        log.info("---------------> executing detour");
     }
 }

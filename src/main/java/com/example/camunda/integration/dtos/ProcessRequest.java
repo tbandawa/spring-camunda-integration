@@ -12,6 +12,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ProcessRequest {
-    
+
     private String name;
+    private String description;
+    private boolean detour;
 }

@@ -24,8 +24,9 @@ public class ProcessController {
     @PostMapping("/start")
     public ResponseEntity<String> startProcess(@RequestBody ProcessRequest request) {
         Map<String, Object> variables = new HashMap<>();
-        variables.put("description", "my description");
-        runtimeService.startProcessInstanceByKey("processStages", variables);
+        variables.put("description", request.getDescription());
+        variables.put("detour", request.isDetour());
+        runtimeService.startProcessInstanceByKey(request.getName(), variables);
         return ResponseEntity.ok("Process " + request.getName() + " started");
     }
 }

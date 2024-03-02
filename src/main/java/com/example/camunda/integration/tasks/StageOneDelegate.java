@@ -12,7 +12,6 @@ public class StageOneDelegate implements JavaDelegate {
 
     @Override
     public void execute(DelegateExecution delegateExecution) throws Exception {
-        String var = (String)delegateExecution.getVariable("description");
-        log.info("---------------> executing stage one with " + var);
+        log.info("---------------> executing stage one");
     }
 }

@@ -11,7 +11,8 @@ import lombok.extern.slf4j.Slf4j;
 public class LastStageDelegate implements JavaDelegate {
 
     @Override
-    public void execute(DelegateExecution arg0) throws Exception {
-        log.info("---------------> executing last stage");
+    public void execute(DelegateExecution delegateExecution) throws Exception {
+        String var = (String)delegateExecution.getVariable("description");
+        log.info("---------------> executing last stage with " + var);
     }
 }
